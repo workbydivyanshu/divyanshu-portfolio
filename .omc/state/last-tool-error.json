@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd /home/divyu/Documents/resume && which pandoc wkhtmltopdf chromium 2>/dev/null\",\"description\":\"Check available tools for PDF conversion\"}",
+  "error": "Exit code 3",
+  "timestamp": "2026-05-13T11:44:28.520Z",
+  "retry_count": 1
+}

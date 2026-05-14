@@ -8,27 +8,24 @@ const featured = [
     title: "P-Stream",
     description:
       "Full-stack streaming platform for movies and TV shows with video delivery optimization, user authentication, and responsive UI. Focused on performance and SEO.",
-    image: "", // No image available
     tech: ["Next.js", "TypeScript", "Tailwind"],
     github: "https://github.com/p-stream/p-stream",
     external: "",
   },
   {
-    title: "STORM Research Assistant",
+    title: "BetterMint",
     description:
-      "Implemented Stanford's STORM methodology for AI-generated research articles using LangGraph and trusted web sources.",
-    image: "",
-    tech: ["Python", "LangGraph", "AI"],
-    github: "https://github.com/Divviyanshu/STORM-Research-Assistant",
+      "Published Chrome extension enhancing Chess.com analysis features. Led frontend UI/UX, managed updates and releases, and handled user feedback on the Chrome Web Store.",
+    tech: ["JavaScript", "Browser Extension APIs", "Chrome Web Store"],
+    github: "https://github.com/BotSolvers/BetterMint",
     external: "",
   },
   {
-    title: "Chessist",
+    title: "STORM Research Assistant",
     description:
-      "Live evaluation bar for Chess.com and Lichess powered by Stockfish engine. Real-time analysis with cross-browser compatibility.",
-    image: "",
-    tech: ["JavaScript", "Stockfish", "Web APIs"],
-    github: "https://github.com/lurimous/Chessist",
+      "Implemented Stanford's STORM methodology for AI-generated long-form research articles. Built a multi-perspective conversation system using LangGraph and trusted web sources.",
+    tech: ["Python", "LangGraph", "AI"],
+    github: "https://github.com/Divviyanshu/STORM-Research-Assistant",
     external: "",
   },
 ];
@@ -68,11 +65,7 @@ export default function FeaturedProjects() {
                     </span>
                   </div>
                 </div>
-                <div
-                  className={
-                    index % 2 === 1 ? "md:[direction:ltr]" : ""
-                  }
-                >
+                <div className={index % 2 === 1 ? "md:[direction:ltr]" : ""}>
                   <div className="font-mono text-xs text-[#64ffda] mb-2">
                     Featured Project
                   </div>
@@ -86,10 +79,7 @@ export default function FeaturedProjects() {
                   </div>
                   <div className="flex flex-wrap gap-3 mb-4">
                     {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs font-mono text-[#8892b0]"
-                      >
+                      <span key={t} className="text-xs font-mono text-[#8892b0]">
                         {t}
                       </span>
                     ))}

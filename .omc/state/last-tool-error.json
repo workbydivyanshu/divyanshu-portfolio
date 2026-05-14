@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cd /home/divyu/Documents/resume && which pandoc wkhtmltopdf chromium 2>/dev/null\",\"description\":\"Check available tools for PDF conversion\"}",
-  "error": "Exit code 3",
-  "timestamp": "2026-05-13T11:44:28.520Z",
+  "tool_input_preview": "{\"command\":\"cd /home/divyu/Documents/resume && wkhtmltopdf --enable-local-file-access --page-size A4 --margin-top 15mm --margin-bottom 15mm --margin-left 15mm --margin-right 15mm resume_for_pdf.html D...",
+  "error": "Exit code 1\nLoading page (1/2)\n[>                                                           ] 0%\rError: Failed to load http://resume_for_pdf.html/, with network status code 3 and http status code 0 - Host resume_for_pdf.html not found\n[============================================================] 100%\rError: Failed loading page http://resume_for_pdf.html (sometimes it will work just to ignore this error with --load-error-handling ignore)\nExit with code 1 due to network error: HostNotFoundError",
+  "timestamp": "2026-05-13T12:01:20.946Z",
   "retry_count": 1
 }

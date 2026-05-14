@@ -5,24 +5,24 @@ import { Github, Folder } from "lucide-react";
 
 const projects = [
   {
-    title: "BetterMint",
+    title: "Chessist",
     description:
-      "Published Chrome extension enhancing Chess.com analysis features.",
-    tech: ["JavaScript", "Browser Extension"],
-    github: "https://github.com/BotSolvers/BetterMint",
+      "Live evaluation bar for Chess.com and Lichess powered by Stockfish engine. Real-time analysis with cross-browser compatibility.",
+    tech: ["JavaScript", "Stockfish Engine", "Web APIs"],
+    github: "https://github.com/lurimous/Chessist",
   },
   {
     title: "Sonosano",
     description:
-      "Cross-platform desktop music preservation and archiving app (Windows, macOS, Linux).",
-    tech: ["Electron", "TypeScript"],
+      "Cross-platform desktop music preservation and archiving app (Windows, macOS, Linux). Built with Electron and TypeScript.",
+    tech: ["Electron", "TypeScript", "Desktop Application"],
     github: "https://github.com/KRSHH/Sonosano",
   },
   {
-    title: "QDL Contributions",
+    title: "QDL (Contributions)",
     description:
-      "Open-source contributor to a Qualcomm firmware flashing tool.",
-    tech: ["C", "libusb", "XML"],
+      "Open-source contributor to a Qualcomm firmware flashing tool. Patched USB communication logic and cross-compilation support.",
+    tech: ["C", "libusb", "XML", "Linux"],
     github: "https://github.com/linux-msm/qdl",
   },
 ];

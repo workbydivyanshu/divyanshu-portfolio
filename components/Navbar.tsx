@@ -48,7 +48,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/Divyanshu_Ganeshwani_Resume_Harvard.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 border border-[#64ffda] text-[#64ffda] rounded text-sm font-mono hover:bg-[#64ffda]/10 transition-colors"
@@ -80,7 +80,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/Divyanshu_Ganeshwani_Resume_Harvard.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 border border-[#64fada] text-[#64ffda] rounded text-sm font-mono text-center hover:bg-[#64ffda]/10 transition-colors"

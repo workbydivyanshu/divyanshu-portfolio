@@ -5,25 +5,25 @@ import { Github, Folder } from "lucide-react";
 
 const projects = [
   {
-    title: "Chessist",
+    title: "Cheatsheets",
     description:
-      "Live evaluation bar for Chess.com and Lichess powered by Stockfish engine. Real-time analysis with cross-browser compatibility.",
-    tech: ["JavaScript", "Stockfish Engine", "Web APIs"],
-    github: "https://github.com/lurimous/Chessist",
+      "Comprehensive, clean, and beginner-friendly website featuring cheatsheets for 100+ coding languages. Built with Next.js 15, TypeScript, and Tailwind CSS with syntax highlighting via Shiki.",
+    tech: ["Next.js 15", "TypeScript", "Tailwind", "Shiki"],
+    github: "https://github.com/workbydivyanshu/cheatsheets",
   },
   {
-    title: "Sonosano",
+    title: "Twenty-Twenty-Twenty",
     description:
-      "Cross-platform desktop music preservation and archiving app (Windows, macOS, Linux). Built with Electron and TypeScript.",
-    tech: ["Electron", "TypeScript", "Desktop Application"],
-    github: "https://github.com/KRSHH/Sonosano",
+      "Android + Web mobile app implementing the 20-20-20 Rule to reduce digital eye strain. Features session timer, break reminders, compliance tracking, and analytics dashboard.",
+    tech: ["Kotlin", "Android", "Web"],
+    github: "https://github.com/workbydivyanshu/twenty-twenty-twenty",
   },
   {
-    title: "QDL (Contributions)",
+    title: "Search Light GNOME 50",
     description:
-      "Open-source contributor to a Qualcomm firmware flashing tool. Patched USB communication logic and cross-compilation support.",
-    tech: ["C", "libusb", "XML", "Linux"],
-    github: "https://github.com/linux-msm/qdl",
+      "Fork of search-light GNOME extension with GNOME 50 (Fedora 44) compatibility fixes. Brings spotlight-style search to the GNOME desktop.",
+    tech: ["JavaScript", "GNOME", "Extension"],
+    github: "https://github.com/workbydivyanshu/search-light-gnome50",
   },
 ];
 

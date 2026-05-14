@@ -7,26 +7,26 @@ const featured = [
   {
     title: "P-Stream",
     description:
-      "Full-stack streaming platform for movies and TV shows with video delivery optimization, user authentication, and responsive UI. Focused on performance and SEO.",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
-    github: "https://github.com/p-stream/p-stream",
+      "Full-stack streaming platform for movies and TV shows. Features include video delivery optimization, user authentication, and a fully responsive UI. Built with performance and SEO in mind.",
+    tech: ["TypeScript", "Next.js", "Node.js"],
+    github: "https://github.com/workbydivyanshu/p-stream",
     external: "",
   },
   {
-    title: "BetterMint",
+    title: "MultifariousAI",
     description:
-      "Published Chrome extension enhancing Chess.com analysis features. Led frontend UI/UX, managed updates and releases, and handled user feedback on the Chrome Web Store.",
-    tech: ["JavaScript", "Browser Extension APIs", "Chrome Web Store"],
-    github: "https://github.com/BotSolvers/BetterMint",
+      "Free & open-source multi-AI platform. Chat with 100+ AI models including cloud APIs and local Ollama models, all in one place. Features real-time streaming and multiple provider support.",
+    tech: ["Next.js", "TypeScript", "OpenRouter", "Ollama"],
+    github: "https://github.com/workbydivyanshu/multifariousAI",
     external: "",
   },
   {
-    title: "STORM Research Assistant",
+    title: "Vartalap",
     description:
-      "Implemented Stanford's STORM methodology for AI-generated long-form research articles. Built a multi-perspective conversation system using LangGraph and trusted web sources.",
-    tech: ["Python", "LangGraph", "AI"],
-    github: "https://github.com/Divviyanshu/STORM-Research-Assistant",
-    external: "",
+      "Modern, open-source instant messaging platform with Discord-like functionality. Full-stack real-time messaging with WebSocket communication, React frontend, Node.js backend, and MongoDB.",
+    tech: ["React", "TypeScript", "Node.js", "MongoDB", "Socket.IO"],
+    github: "https://github.com/workbydivyanshu/vartalap-app",
+    external: "https://vartalap-app-vert.vercel.app",
   },
 ];
 

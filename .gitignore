@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# OMC state
+.omc/
+EOF && echo "Done" || echo "No .gitignore found, creating one"

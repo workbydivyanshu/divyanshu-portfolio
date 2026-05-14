@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Terminal } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
+  { name: "Work", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -17,74 +15,80 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass py-3" : "py-5 bg-transparent"
+    <header
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#0a192f]/90 backdrop-blur-md shadow-lg shadow-black/10"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group">
-          <Terminal className="w-5 h-5 text-primary group-hover:text-accent transition-colors" />
-          <span className="font-mono text-lg font-bold tracking-wider">
-            <span className="text-primary">DG</span>
-          </span>
+      <nav className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
+        <a
+          href="#"
+          className="text-[#64ffda] font-mono text-lg font-bold tracking-wider hover:text-[#64ffda]/80 transition-colors"
+        >
+          &lt;/dg&gt;
         </a>
 
-        <ul className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                className="relative text-sm font-medium text-text-muted hover:text-foreground transition-colors group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-              </a>
-            </li>
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-mono text-[#ccd6f6] hover:text-[#64ffda] transition-colors relative group"
+            >
+              <span className="text-[#64ffda] mr-1">#</span>
+              {link.name}
+            </a>
           ))}
-        </ul>
+          <a
+            href="/Divyanshu_Ganeshwani_Resume_Harvard.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-[#64ffda] text-[#64ffda] rounded text-sm font-mono hover:bg-[#64ffda]/10 transition-colors"
+          >
+            Resume
+          </a>
+        </div>
 
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-[#64ffda]"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
         >
-          {menuOpen ? <X /> : <Menu />}
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-      </div>
+      </nav>
 
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass mt-2 mx-4 rounded-lg overflow-hidden"
+      {menuOpen && (
+        <div className="md:hidden bg-[#112240] border-t border-[#233554] px-6 py-4 flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="text-sm font-mono text-[#ccd6f6] hover:text-[#64ffda] transition-colors"
+            >
+              <span className="text-[#64ffda] mr-1">#</span>
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="/Divyanshu_Ganeshwani_Resume_Harvard.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-[#64fada] text-[#64ffda] rounded text-sm font-mono text-center hover:bg-[#64ffda]/10 transition-colors"
           >
-            <ul className="flex flex-col gap-4 p-4">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="block text-sm font-medium text-text-muted hover:text-foreground transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+            Resume
+          </a>
+        </div>
+      )}
+    </header>
   );
 }

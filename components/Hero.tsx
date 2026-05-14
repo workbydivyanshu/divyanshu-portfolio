@@ -1,121 +1,67 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
-import MatrixBackground from "./MatrixBackground";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 pt-[70px]"
     >
-      <MatrixBackground />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-3xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-light mb-6">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-sm font-mono text-primary">
-              Available for opportunities
-            </span>
-          </div>
+          <p className="text-[#64ffda] font-mono text-sm mb-4">
+            Hi, my name is
+          </p>
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#ccd6f6] mb-4 leading-tight"
         >
-          Hi, I&apos;m{" "}
-          <span className="gradient-text">Divyanshu Ganeshwani</span>
+          Divyanshu Ganeshwani.
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-xl sm:text-2xl text-text-muted mb-4 font-mono"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#8892b0] mb-6 leading-tight"
         >
-          Full Stack Developer & Security Engineer
-        </motion.p>
+          I build things for the web.
+        </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-base sm:text-lg text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-[#8892b0] text-base sm:text-lg max-w-xl leading-relaxed mb-10"
         >
-          Building secure, performant web applications with Next.js, React,
-          TypeScript & Python. Passionate about engineering solutions that work
-          at scale while keeping security first.
+          I am a Full Stack Developer based in India. A passionate technologist
+          who specializes in building exceptional digital experiences using
+          Next.js, React, TypeScript, and Python. Currently open to new
+          opportunities in frontend, backend, or full stack engineering roles.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
           <a
-            href="#projects"
-            className="px-8 py-3 rounded-lg bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 transition-all font-medium"
-          >
-            View My Work
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3 rounded-lg bg-accent/10 border border-accent/30 text-accent hover:bg-accent/20 transition-all font-medium"
-          >
-            Get In Touch
-          </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="flex items-center justify-center gap-6 mt-12"
-        >
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-lg glass-light hover:border-primary/50 transition-all group"
-          >
-            <Github className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors" />
-          </a>
-          <a
-            href="https://linkedin.com/in/divyanshuganeshwani"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-lg glass-light hover:border-primary/50 transition-all group"
-          >
-            <Linkedin className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors" />
-          </a>
-          <a
-            href="mailto:divyanshuganeshwani@proton.me"
-            className="p-3 rounded-lg glass-light hover:border-primary/50 transition-all group"
-          >
-            <Mail className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors" />
+              href="mailto:divyanshuganeshwani@proton.me"
+              target="_blank"
+              rel="noopener noreferrer">
+            Check out my Resume!
           </a>
         </motion.div>
       </div>
-
-      <motion.a
-        href="#about"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-      >
-        <ChevronDown className="w-6 h-6 text-text-muted animate-bounce" />
-      </motion.a>
     </section>
   );
 }
